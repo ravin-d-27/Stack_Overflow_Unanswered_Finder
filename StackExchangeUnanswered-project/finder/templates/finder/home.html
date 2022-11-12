@@ -47,7 +47,7 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
+  <body class="d-flex h-100 text-center text-black bg-white">
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
@@ -63,8 +63,44 @@
     </div>
   </header>
 
-<div class="cover-container">
+  <br><br>
+  <br>
+  <br>
+  <h3 align="left">Questions Unanswered</h3>
+  <br><br>
+
     
+  {% for data,link,tags,usertype,profile in resp %}
+    <!--<a class="nav-link fw-bold py-1 px-100" href="{{link}}">{{data}}</a><br>-->
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Name: {{usertype}}</strong>
+            <h3 class="mb-0">{{data}}</h3>
+            <br>
+            <br>
+            <a href="{{link}}" class="stretched-link">Click here to answer</a>
+            <br>
+            <br>
+            {{tags}}
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="{{profile}}" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title></title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+  
+          </div>
+      </div>
+    </div>
+</div>
+
+    <br>
+  {% endfor %}
+
+
+        
+
+
 </div>
 
 </body>
