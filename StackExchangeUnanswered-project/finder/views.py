@@ -1,5 +1,4 @@
 from django.shortcuts import render
-import json
 import requests
 
 
