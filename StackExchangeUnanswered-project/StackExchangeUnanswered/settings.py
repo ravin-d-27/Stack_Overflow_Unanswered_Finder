@@ -118,7 +118,7 @@ USE_TZ = True
 
 import os
 STATICFILES_DIRS = [
-os.path.join(BASE_DIR,'StackExchangeUnanswered/static/')
+    os.path.join(BASE_DIR,'StackExchangeUnanswered/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
