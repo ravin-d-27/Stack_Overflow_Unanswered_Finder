@@ -1,0 +1,16 @@
+
+.navbar{
+    margin: 0 10%;
+}
+.questions{
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+.question{
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    width: 80%;
+}
